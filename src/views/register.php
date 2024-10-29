@@ -7,6 +7,16 @@ include 'components/header.php';
         <div class="col-md-6">
             <h4 class="text-center mb-5">Registration</h4>
 
+            <?php if (isset($error) && !empty($error)): ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php
+                    foreach ($error as $value) {
+                        echo $value . '<br />';
+                    }
+                    ?>
+                </div>
+            <?php endif; ?>
+
             <form action="/register" method="POST">
                 <div class="form-group row">
                     <label for="name" class="col-sm-4 col-form-label text-right">Name</label>
@@ -40,7 +50,8 @@ include 'components/header.php';
 
                 <div class="form-group row">
                     <div class="col-sm-8 offset-sm-4">
-                        <button type="submit" class="btn btn-primary btn-block mt-5">Submit</button>
+                        <button type="submit" name="submit" value="true"
+                            class="btn btn-primary btn-block mt-5">Submit</button>
                     </div>
                 </div>
             </form>
