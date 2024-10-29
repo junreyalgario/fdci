@@ -1,0 +1,17 @@
+{
+    "name": "fdci/cebu",
+    "autoload": {
+        "psr-4": {
+            "Fdci\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "junreyalgario",
+            "email": "junrey.algario@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
